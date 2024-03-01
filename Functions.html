@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <link rel="stylesheet" href="Fiebig's Website.css">
+    <title>Fiebig's Website</title>
+
+    <br>
+        <a href = "Index.html"><h1>Nicholas W Fiebig</h1></a>
+    <br>
+
+    <section id = "buttonSection">
+        <br>
+            <header>
+                <a href ="AboutMe.html"><button id ="button">About Me</button></a>
+                <a href ="Experience.html"><button id = "button">Experience</button></a>
+                <a href ="Functions.html"><button id = "button">Functions</button></a>
+                <a href ="Contact.html"><button id = "button">Contact</button></a>
+            </header>
+        <br>
+    </section>
+
+    <body>
+        <section id = "function">
+            <h2>Temperature Degree Converter</h2>
+                <input id = "CInput" type="number">C°</input>
+                <button id = "functionButton" onclick = checkContent() >Convert</button>
+                <input id = "FInput" type="number">F°</input>
+
+            <script>
+                let celsiusElement = document.getElementById("CInput");
+                let fahrenheitElement = document.getElementById("FInput");
+
+                function checkContent(){
+                    if(celsiusElement.value == ""){
+                        fahrenheitsToCelsius();
+                    } else if(fahrenheitElement.value == ""){
+                        celsiusToFahrenheit();
+                    }
+
+                }
+
+                function celsiusToFahrenheit(){
+                    let fahrenheitTemp = ((document.getElementById("CInput").value) * 1.8) + 32;
+                    fahrenheitElement.value = Math.round(fahrenheitTemp * 100) / 100;
+                    celsiusElement.value = "";
+                }
+
+                function fahrenheitsToCelsius(){
+                    let celsiusTemp = ((document.getElementById("FInput").value) - 32) * (5/9);
+                    celsiusElement.value = Math.round(celsiusTemp * 100) / 100;
+                    fahrenheitElement.value = "";
+                }   
+            </script>
+
+            <h2>Body Mass Index Calculator</h2>
+                <label for="heightInput">Enter your height in inches:</label>
+                <input type='number' id='heightInput'><br>
+                <label for="weightInput">Enter your weight in pounds:</label>
+                <input type='number' id='weightInput'><br>
+		        <button id = "functionButton" value="Calculate BMI" onclick = processEntries()>Calculate</button> 
+		        <p id="bmiOutput"></p>  
+
+                <script>
+                    var processEntries = function() {	
+                        let height = document.getElementById("heightInput");
+                        let weight = document.getElementById("weightInput");
+                        let output = document.getElementById("bmiOutput");
+            
+                        if(height.value < 0 && weight.value < 0 || height.value == "" && weight.value == "" || height.value < 0 && weight.value == "" || height.value == "" && weight.value < 0){
+                            output.textContent = "Height is Invalid and Weight is Invalid";
+                        } else if (weight.value < 0 || weight.value == ""){
+                            output.textContent = "Weight is invalid";
+                        } else if (height.value < 0 || height.value == ""){        
+                            output.textContent = "Height is invalid";
+                        } else{
+                            let bmi = (703 * weight.value) / Math.pow(height.value, 2);
+                            bmi = Math.round(bmi * 10) / 10
+                            output.textContent = bmi;
+                        }
+                    }
+            </script>
+
+
+        </section>
+
+
+    </body>
+
+
+</html>
