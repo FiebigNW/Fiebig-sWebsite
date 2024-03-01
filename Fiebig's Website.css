@@ -1,6 +1,17 @@
+html {
+  background-image: url("Images/background.jpg");
+  background-position: fixed;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
 h1 {
-    text-align: center;
+    display: inline-block;
     font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    border-color: #1A1A1A;
+    border-style: dashed;
 }
 
 h2, p, ul {
@@ -8,14 +19,12 @@ h2, p, ul {
 }
 
 #mainSection{
-  padding: auto;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  border-color: #1A1A1A;
+  border-style: dashed;
 }
-
-title:hover{
-  background-color: lightblue;
-  font-style: white;
-}
-
 
 #button {
 
@@ -109,31 +118,9 @@ title:hover{
   transform: translateY(0);
 }
 
-#imageButton:disabled {
-    pointer-events: none;
-  }
-  
-#imageButton:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-#imageButton:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-  
-
-#imageButton{
-    height: auto;
-    max-width: 40px;
-    padding-block: 0%;
-    border: none;
-    background-color: inherit;
-}
-#buttonImage {
-  width: 30px;
-  height: auto;
+#functionButton:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
 
 #resumeImage {
@@ -144,6 +131,12 @@ title:hover{
   margin-right: auto;
   border: none;
   padding: none;
+}
+
+.nextTo {
+    display: inline-block;
+    width: 30%;
+    object-position: center;
 }
 
 
