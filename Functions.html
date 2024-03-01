@@ -23,8 +23,10 @@
         <section id = "function">
             <h2>Temperature Degree Converter</h2>
                 <input id = "CInput" type="number">C°</input>
-                <button id = "functionButton" onclick = checkContent() >Convert</button>
                 <input id = "FInput" type="number">F°</input>
+                <br><br>
+                <button id = "functionButton" onclick = checkContent() >Convert</button>
+                
 
             <script>
                 let celsiusElement = document.getElementById("CInput");
@@ -55,30 +57,34 @@
             <h2>Body Mass Index Calculator</h2>
                 <label for="heightInput">Enter your height in inches:</label>
                 <input type='number' id='heightInput'><br>
+                <br>
                 <label for="weightInput">Enter your weight in pounds:</label>
                 <input type='number' id='weightInput'><br>
+                <br>
 		        <button id = "functionButton" value="Calculate BMI" onclick = processEntries()>Calculate</button> 
 		        <p id="bmiOutput"></p>  
 
-                <script>
-                    var processEntries = function() {	
-                        let height = document.getElementById("heightInput");
-                        let weight = document.getElementById("weightInput");
-                        let output = document.getElementById("bmiOutput");
-            
-                        if(height.value < 0 && weight.value < 0 || height.value == "" && weight.value == "" || height.value < 0 && weight.value == "" || height.value == "" && weight.value < 0){
-                            output.textContent = "Height is Invalid and Weight is Invalid";
-                        } else if (weight.value < 0 || weight.value == ""){
-                            output.textContent = "Weight is invalid";
-                        } else if (height.value < 0 || height.value == ""){        
-                            output.textContent = "Height is invalid";
-                        } else{
-                            let bmi = (703 * weight.value) / Math.pow(height.value, 2);
-                            bmi = Math.round(bmi * 10) / 10
-                            output.textContent = bmi;
-                        }
+            <script>
+                  var processEntries = function() {	
+                    let height = document.getElementById("heightInput");
+                    let weight = document.getElementById("weightInput");
+                    let output = document.getElementById("bmiOutput");
+                
+                    if(height.value < 0 && weight.value < 0 || height.value == "" && weight.value == "" || height.value < 0 && weight.value == "" || height.value == "" && weight.value < 0){
+                        output.textContent = "Height is Invalid and Weight is Invalid";
+                    } else if (weight.value < 0 || weight.value == ""){
+                        output.textContent = "Weight is invalid";
+                       } else if (height.value < 0 || height.value == ""){        
+                        output.textContent = "Height is invalid";
+                    } else{
+                        let bmi = (703 * weight.value) / Math.pow(height.value, 2);
+                        bmi = Math.round(bmi * 10) / 10
+                        output.textContent = bmi;
                     }
+                }
             </script>
+
+           
 
 
         </section>
