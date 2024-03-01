@@ -7,11 +7,6 @@ h2, p, ul {
     font-family: 'Courier New', Courier, monospace;
 }
 
-#grid-container { 
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
 #mainSection{
   padding: auto;
 }
@@ -42,13 +37,44 @@ title:hover{
     outline: none;
     padding: 16px 24px;
     text-align: center;
+    align-items: center;
     text-decoration: none;
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 33%;
+    width: 24.5%;
     will-change: transform;
+}
+
+#functionButton {
+
+  appearance: none;
+  background-color: white;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform;
 }
 
 
@@ -58,6 +84,21 @@ title:hover{
 }
 
 #button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  background-color: lightblue;
+  transform: translateY(-2px);
+}
+
+#functionButton:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+#functionButton:disabled {
+  pointer-events: none;
+}
+
+#functionButton:hover {
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   background-color: lightblue;
   transform: translateY(-2px);
@@ -104,4 +145,5 @@ title:hover{
   border: none;
   padding: none;
 }
+
 
