@@ -5,6 +5,12 @@ html {
   background-attachment: fixed;
 }
 
+#resumeImage {
+  border-radius: 5px;
+  padding: 5px;
+  border-color: #1A1A1A;
+  border-style: dashed;
+}
 
 h1 {
     display: inline-block;
