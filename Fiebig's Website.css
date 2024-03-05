@@ -5,6 +5,7 @@ html {
   background-attachment: fixed;
 }
 
+
 h1 {
     display: inline-block;
     font-family: 'Courier New', Courier, monospace;
@@ -23,6 +24,7 @@ h2, p, ul {
   padding: 5px;
   border-color: #1A1A1A;
   border-style: dashed;
+  word-spacing: 2px;
 }
 
 #button {
@@ -131,12 +133,13 @@ h2, p, ul {
   background-color: rgb(0, 0, 0);
   border-radius: 5px;
   padding: 5px;
+  border-color: #1A1A1A;
+  
 }
 
 .nextTo {
-    display: inline-block;
-    width: 30%;
-    object-position: center;
+    display:inline-block;
+    width: 50%;
 }
 
 
