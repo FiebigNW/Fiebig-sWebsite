@@ -7,15 +7,25 @@ html {
 
 
 h1 {
-    display: inline-block;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: white;
-    border-color: #1A1A1A;
-    border-style: groove;
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: white;
+  border-color: #1A1A1A;
+  border-style: groove;
 }
 
 h2, p, ul {
-    font-family: 'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+th, td {
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  height: 20px;
+  width: 40px;
 }
 
 #mainSection{
@@ -25,6 +35,59 @@ h2, p, ul {
   border-color: #1A1A1A;
   border-style: dashed;
   word-spacing: 2px;
+}
+
+#wordleSection{
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  border-color: #1A1A1A;
+  border-style: dashed;
+  word-spacing: 2px;
+}
+
+#board{
+  width: 350px;
+  height: 420px;
+  margin: 0 auto;
+  margin-top: 3px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tile{
+  /* Box */
+  border: 2px solid lightgrey;
+  width: 60px;
+  height: 60px;
+  margin: 2.5px;
+
+
+  /* Text */
+  color: black;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.correct{
+  background-color: #6aaa64;
+  color: white;
+  border-color: white;
+}
+
+.present{
+  background-color: #c9b458;
+  color: white;
+  border-color: white;
+}
+
+.absent{
+  background-color: #787C7e;
+  color: white;
+  border-color: white;
 }
 
 #button {
@@ -137,9 +200,54 @@ h2, p, ul {
   
 }
 
-.nextTo {
-    display:inline-block;
-    width: 50%;
+.container{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
+.item{
+  border-left: dashed;
+  border-right: dashed;
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  cursor: pointer;
+}
 
+.item-1:hover{
+  flex-grow: .50;
+  opacity: 1;
+  
+}
+.item-2:hover{
+  flex-grow: .50;
+  opacity: 1;
+}
+.item-3:hover{
+  flex-grow: .50;
+  opacity: 1;
+}
+.item-4:hover{
+  flex-grow: .50;
+  opacity: 1;
+}
+.item-5:hover{
+  flex-grow: .50;
+  opacity: 1;
+}
+.item-6:hover{
+  flex-grow: .50;
+  opacity: 1;
+}
+
+#experienceSection{
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    border-color: #1A1A1A;
+    border-style: dashed;
+    word-spacing: 2px;
+    height: 400px;
+  }
+  
